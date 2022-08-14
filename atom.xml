@@ -3,11 +3,11 @@
   <title>穿梭时间</title>
   
   
-  <link href="http://example.com/atom.xml" rel="self"/>
+  <link href="https://wunaildy.github.io/Blog/atom.xml" rel="self"/>
   
-  <link href="http://example.com/"/>
+  <link href="https://wunaildy.github.io/Blog/"/>
   <updated>2022-08-14T14:56:17.732Z</updated>
-  <id>http://example.com/</id>
+  <id>https://wunaildy.github.io/Blog/</id>
   
   <author>
     <name>FFXDZ</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>python爬虫日记（一）——python基础</title>
-    <link href="http://example.com/2022/08/14/python%E7%88%AC%E8%99%AB%E6%97%A5%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94python%E5%9F%BA%E7%A1%80/"/>
-    <id>http://example.com/2022/08/14/python%E7%88%AC%E8%99%AB%E6%97%A5%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94python%E5%9F%BA%E7%A1%80/</id>
+    <link href="https://wunaildy.github.io/Blog/2022/08/14/python%E7%88%AC%E8%99%AB%E6%97%A5%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94python%E5%9F%BA%E7%A1%80/"/>
+    <id>https://wunaildy.github.io/Blog/2022/08/14/python%E7%88%AC%E8%99%AB%E6%97%A5%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94python%E5%9F%BA%E7%A1%80/</id>
     <published>2022-08-14T14:31:06.000Z</published>
     <updated>2022-08-14T14:56:17.732Z</updated>
     
@@ -30,17 +30,17 @@
     
     
     
-    <category term="python" scheme="http://example.com/categories/python/"/>
+    <category term="python" scheme="https://wunaildy.github.io/Blog/categories/python/"/>
     
     
-    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://wunaildy.github.io/Blog/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
   <entry>
     <title>python爬虫</title>
-    <link href="http://example.com/2022/08/13/python%E7%88%AC%E8%99%AB/"/>
-    <id>http://example.com/2022/08/13/python%E7%88%AC%E8%99%AB/</id>
+    <link href="https://wunaildy.github.io/Blog/2022/08/13/python%E7%88%AC%E8%99%AB/"/>
+    <id>https://wunaildy.github.io/Blog/2022/08/13/python%E7%88%AC%E8%99%AB/</id>
     <published>2022-08-12T16:14:33.000Z</published>
     <updated>2022-08-12T16:47:17.792Z</updated>
     
@@ -51,10 +51,10 @@
     
     
     
-    <category term="python" scheme="http://example.com/categories/python/"/>
+    <category term="python" scheme="https://wunaildy.github.io/Blog/categories/python/"/>
     
     
-    <category term="技术" scheme="http://example.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    <category term="技术" scheme="https://wunaildy.github.io/Blog/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
