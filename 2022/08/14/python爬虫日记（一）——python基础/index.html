@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+  
+
+    <head>
+      <meta charset="utf-8" />
+        
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, maximum-scale=1"
+      />
+      <title>python爬虫日记（一）——python基础 |  穿梭时间</title>
+  <meta name="generator" content="hexo-theme-ayer">
+      
+      <link rel="shortcut icon" href="/images/时间-is.svg" />
+       
+<link rel="stylesheet" href="/dist/main.css">
+
+      
+<link rel="stylesheet" href="/css/fonts/remixicon.css">
+
+      
+<link rel="stylesheet" href="/css/custom.css">
+ 
+      <script src="https://cdn.staticfile.org/pace/1.2.4/pace.min.js"></script>
+       
+ 
+
+      <link
+        rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-bulma@5.0.1/bulma.min.css"
+      />
+      <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.min.js"></script>
+
+      <!-- mermaid -->
+      
+      <style>
+        .swal2-styled.swal2-confirm {
+          font-size: 1.6rem;
+        }
+      </style>
+    <link rel="alternate" href="/atom.xml" title="穿梭时间" type="application/atom+xml">
+</head>
+  </html>
+</html>
+
+
+<body>
+  <div id="app">
+    
+      
+      <canvas width="1777" height="841"
+        style="position: fixed; left: 0px; top: 0px; z-index: 99999; pointer-events: none;"></canvas>
+      
+    <main class="content on">
+      <section class="outer">
+  <article
+  id="post-python爬虫日记（一）——python基础"
+  class="article article-type-post"
+  itemscope
+  itemprop="blogPost"
+  data-scroll-reveal
+>
+  <div class="article-inner">
+    
+    <header class="article-header">
+       
+<h1 class="article-title sea-center" style="border-left:0" itemprop="name">
+  python爬虫日记（一）——python基础
+</h1>
+ 
+
+      
+    </header>
+     
+    <div class="article-meta">
+      <a href="/2022/08/14/python%E7%88%AC%E8%99%AB%E6%97%A5%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94python%E5%9F%BA%E7%A1%80/" class="article-date">
+  <time datetime="2022-08-14T14:31:06.000Z" itemprop="datePublished">2022-08-14</time>
+</a> 
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/python/">python</a>
+  </div>
+  
+<div class="word_count">
+    <span class="post-time">
+        <span class="post-meta-item-icon">
+            <i class="ri-quill-pen-line"></i>
+            <span class="post-meta-item-text"> Word count:</span>
+            <span class="post-count">1.8k</span>
+        </span>
+    </span>
+
+    <span class="post-time">
+        &nbsp; | &nbsp;
+        <span class="post-meta-item-icon">
+            <i class="ri-book-open-line"></i>
+            <span class="post-meta-item-text"> Reading time≈</span>
+            <span class="post-count">7 min</span>
+        </span>
+    </span>
+</div>
+ 
+    </div>
+      
+    <div class="tocbot"></div>
+
+
+
+
+  
+    <div class="article-entry" itemprop="articleBody">
+       
+  <p>接下来将要学习python爬虫，在此之前我们有必要先学习python的基础知识，本篇博客将学习学习python的基础用法，但并不会深入讲解python在项目中的使用。</p>
+<span id="more"></span>
+
+<p>因为本系列主要讲解为python爬虫相关知识，但在学习爬虫过程中对于python基础的使用必不可少，因此本文仅从以下几点讲解python的基础知识以满足后续爬虫学习的使用。</p>
+<ol>
+<li>python注释</li>
+<li>数据类型</li>
+<li>条件控制语句——if</li>
+<li>循环语句</li>
+<li>函数与库</li>
+<li>面向对象</li>
+</ol>
+<h1 id="✏️python注释"><a href="#✏️python注释" class="headerlink" title="✏️python注释"></a>✏️python注释</h1><p>python注释分为单行注释与多行注释</p>
+<ul>
+<li><p>单行注释以“#”开头，例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 这是一个python注释</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello world!&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>多行注释用三个单引号（’’’）或者三个双引号（”””）括起来，例如：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">这是python的多行注释</span></span><br><span class="line"><span class="string">这里使用的单引号</span></span><br><span class="line"><span class="string">下面是第一个python程序</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello world!&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">这是python的多行注释</span></span><br><span class="line"><span class="string">这里使用的双引号</span></span><br><span class="line"><span class="string">下面是第一个python程序</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;hello world!&#x27;</span>)</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>在书写类或者函数的时候，一定要写上对应的注释，这里推荐使用Sphinx风格的注释：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">class</span> <span class="title class_">Person</span>:</span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    :paramz name: 姓名</span></span><br><span class="line"><span class="string">    :param age: 年龄</span></span><br><span class="line"><span class="string">    :param favorite_color: 最喜欢的颜色</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">def</span> <span class="title function_">__init__</span>(<span class="params">self, name, age, favorite_color</span>):</span><br><span class="line">        self.name = name</span><br><span class="line">        self.age = age</span><br><span class="line">        self.favorite_color = favorite_color</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h1 id="✏️数据类型"><a href="#✏️数据类型" class="headerlink" title="✏️数据类型"></a>✏️数据类型</h1><p>在python中，所有的变量初始不需要声明，但在使用前必须对变量赋值。</p>
+<p>python中标准的数据类型有：</p>
+<ul>
+<li>Number（数字）</li>
+<li>String（字符串）</li>
+<li>List（列表）</li>
+<li>Tuple（元组）</li>
+<li>Set（集合）</li>
+<li>Dictionary（字典）</li>
+</ul>
+<h2 id="🍋Number"><a href="#🍋Number" class="headerlink" title="🍋Number"></a>🍋Number</h2><p>Python3 支持 <strong>int、float、bool、complex（复数）</strong></p>
+<p>在Python 3里，只有一种整数类型 int，表示为长整型，没有 python2 中的 Long</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 查看四种数据的数据类型</span></span><br><span class="line">a, b, c, d, = <span class="number">10</span>, <span class="number">2.2</span>, <span class="literal">True</span>, <span class="number">3</span> + <span class="number">3j</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(b))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(c))</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(d))</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220810225758660.png" alt="image-20220810225758660"></p>
+<p>需要i特别注意，布尔类型在python中也是Number类型的数据，可以直接参与数字计算。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 布尔类型参与计算</span></span><br><span class="line"><span class="built_in">print</span>(<span class="number">1</span>+<span class="literal">True</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220810230008707.png" alt="image-20220810230008707"></p>
+<h2 id="🍋String"><a href="#🍋String" class="headerlink" title="🍋String"></a>🍋String</h2><p>python中字符串用单引号（’ ‘)或者双引号（” “）括起来。</p>
+<p>可通过以下方式来截取字符串：</p>
+<p>变量[头下标: 尾下标]</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="string">&#x27;hello&#x27;</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(a))  <span class="comment"># 查看字符串的类型</span></span><br><span class="line"><span class="built_in">print</span>(a)        <span class="comment"># 输出字符串</span></span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">1</span>:<span class="number">3</span>])   <span class="comment"># 截取第二到第三个字符</span></span><br><span class="line"><span class="built_in">print</span>(a[<span class="number">1</span>:])    <span class="comment"># 输出第二个到最后一个字符</span></span><br><span class="line"><span class="built_in">print</span>(a * <span class="number">2</span>)    <span class="comment"># 输出字符串两次</span></span><br><span class="line"><span class="built_in">print</span>(a + <span class="string">&#x27;world&#x27;</span>) <span class="comment"># 连接字符串</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220810231225584.png" alt="image-20220810231225584"></p>
+<h2 id="🍋List"><a href="#🍋List" class="headerlink" title="🍋List"></a>🍋List</h2><p>列表可以完成大多数集合类的数据结构实现。列表中元素的类型可以不相同，它支持数字，字符串甚至可以包含列表（所谓嵌套）。</p>
+<p>列表中的元素写在[ ]中，以逗号（ , ）隔开。</p>
+<p>列表的操作也可通过以下方式进行：</p>
+<p>变量[头下标: 尾下标]</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = [<span class="number">11</span>, <span class="string">&#x27;hello&#x27;</span>, <span class="number">12.3</span>, <span class="string">&#x27;你好&#x27;</span>, <span class="number">22</span>]</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(<span class="built_in">list</span>))  <span class="comment"># 查看列表类型</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>[<span class="number">0</span>])  <span class="comment"># 输出第一个元素</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>[<span class="number">1</span>:<span class="number">4</span>])  <span class="comment"># 输出第一至第四的元素</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>[<span class="number">2</span>:])  <span class="comment"># 输出第二个至最后一个元素</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220810231913543.png" alt="image-20220810231913543"></p>
+<p>列表支持元素的添加、删除。</p>
+<ul>
+<li>添加列表元素，使用append()函数来向列表中添加元素。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = [<span class="number">11</span>, <span class="string">&#x27;hello&#x27;</span>, <span class="number">12.3</span>, <span class="string">&#x27;你好&#x27;</span>, <span class="number">22</span>]</span><br><span class="line"><span class="built_in">list</span>.append(<span class="string">&#x27;张三&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220810232344828.png" alt="image-20220810232344828"></p>
+<ul>
+<li>删除列表元素，使用del来删除指定位置的元素。</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">list</span> = [<span class="number">11</span>, <span class="string">&#x27;hello&#x27;</span>, <span class="number">12.3</span>, <span class="string">&#x27;你好&#x27;</span>, <span class="number">22</span>]</span><br><span class="line"><span class="keyword">del</span> <span class="built_in">list</span>[<span class="number">1</span>] <span class="comment"># 删除hello</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">list</span>)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220810232508584.png" alt="image-20220810232508584"></p>
+<h2 id="🍋Tuple"><a href="#🍋Tuple" class="headerlink" title="🍋Tuple"></a>🍋Tuple</h2><p>python的元组与列表类似，但是元组中的元素不能修改。</p>
+<p>元组使用小括号“ ( ) ”括起来，元组的使用与列表类似，需要注意的是元组中的元素不能被删除，只能删除整个元组。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">tup = (<span class="number">1</span>, <span class="string">&#x27;张三&#x27;</span>, <span class="string">&#x27;hello&#x27;</span>, <span class="number">22.2</span>)</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(tup))  <span class="comment"># 输出元组类型</span></span><br><span class="line"><span class="built_in">print</span>(tup[<span class="number">2</span>])  <span class="comment"># 输出第三个元组元素</span></span><br><span class="line"><span class="built_in">print</span>(tup[<span class="number">1</span>:<span class="number">3</span>])  <span class="comment"># 输出第二至第三个元素</span></span><br><span class="line"><span class="built_in">print</span>((tup[<span class="number">1</span>:]))  <span class="comment"># 输出第二至最后一个元素</span></span><br><span class="line"><span class="keyword">del</span> tup  <span class="comment"># 删除元组</span></span><br><span class="line"><span class="built_in">print</span>(tup)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220811200128415.png" alt="image-20220811200128415"></p>
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220811200204891.png" alt="image-20220811200204891"></p>
+<h2 id="🍋Set"><a href="#🍋Set" class="headerlink" title="🍋Set"></a>🍋Set</h2><p>集合（set）是一个无序的不重复元素序列。</p>
+<p>可以用大括号（{ }）或者set( )函数来创建集合，创建空集合必须使用set( )函数，因为{ }是用来创建空字典的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">a = &#123;<span class="string">&#x27;sun&#x27;</span>, <span class="string">&#x27;mon&#x27;</span>, <span class="string">&#x27;tues&#x27;</span>, <span class="number">11</span>&#125;</span><br><span class="line">b = <span class="built_in">set</span>(<span class="string">&#x27;abcdefffff&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(a)</span><br><span class="line"><span class="built_in">print</span>(b)  <span class="comment"># 集合有去重功能，去重后为无序列表</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220811200602616.png" alt="image-20220811200602616"></p>
+<p>集合之间是可以进行运算的。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">a = <span class="built_in">set</span>(<span class="string">&#x27;abracadabra&#x27;</span>)</span><br><span class="line">b = <span class="built_in">set</span>(<span class="string">&#x27;alacazam&#x27;</span>)</span><br><span class="line"><span class="built_in">print</span>(a - b)  <span class="comment"># 集合a中包含而集合b中不包含的元素</span></span><br><span class="line"><span class="built_in">print</span>(a | b)  <span class="comment"># 集合a或b中包含的所有元素</span></span><br><span class="line"><span class="built_in">print</span>(a &amp; b)  <span class="comment"># 集合a和b中都包含了的元素</span></span><br><span class="line"><span class="built_in">print</span>(a ^ b)  <span class="comment"># 不同时包含于a和b的元素</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220811200624985.png" alt="image-20220811200624985"></p>
+<p>常用的集合操作：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">s = <span class="built_in">set</span>((<span class="string">&#x27;hello&#x27;</span>, <span class="string">&#x27;world&#x27;</span>, <span class="string">&#x27;nihao&#x27;</span>))</span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line">s.add(<span class="string">&#x27;ok&#x27;</span>)  <span class="comment"># 添加元素</span></span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line">s.update(&#123;<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, &#125;)  <span class="comment"># update可以添加列表</span></span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line">s.remove(<span class="string">&#x27;hello&#x27;</span>)  <span class="comment"># 移除元素</span></span><br><span class="line">s.discard(<span class="string">&#x27;world&#x27;</span>)  <span class="comment"># 移除元素</span></span><br><span class="line"><span class="built_in">print</span>(s)</span><br><span class="line">s.clear()  <span class="comment"># 清空集合</span></span><br><span class="line"><span class="built_in">print</span>(s)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220811200713087.png" alt="image-20220811200713087"></p>
+<h2 id="🍋Dictionary"><a href="#🍋Dictionary" class="headerlink" title="🍋Dictionary"></a>🍋Dictionary</h2><p>字典是python中一种可变容器，可以存储任意类型的对象。</p>
+<p>字典用花括号（{ }）括起来，内部以key:value进行组合，每个组合间以逗号( , )隔开。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">dict1 = &#123;</span><br><span class="line">    <span class="string">&#x27;name&#x27;</span>: <span class="string">&#x27;piter&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;age&#x27;</span>: <span class="number">21</span>,</span><br><span class="line">    <span class="string">&#x27;country&#x27;</span>: <span class="string">&#x27;US&#x27;</span>,</span><br><span class="line">    <span class="string">&#x27;like&#x27;</span>: <span class="string">&#x27;basketball&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>字典里的元素是可以修改的，字典的常用使用如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">print</span>(dict1)  <span class="comment"># 打印字典内容</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">type</span>(dict1))  <span class="comment"># 打印字典类型</span></span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">len</span>(dict1))  <span class="comment"># 查看字典数量</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;name:&#x27;</span>, dict1[<span class="string">&#x27;name&#x27;</span>])  <span class="comment"># 访问字典里name的值</span></span><br><span class="line">dict1[<span class="string">&#x27;country&#x27;</span>] = <span class="string">&#x27;JP&#x27;</span>  <span class="comment"># 修改字典里元素值</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;country:&#x27;</span>, dict1[<span class="string">&#x27;country&#x27;</span>])  <span class="comment"># 查看修改结果</span></span><br><span class="line"><span class="keyword">del</span> dict1[<span class="string">&#x27;like&#x27;</span>]  <span class="comment"># 删除字典元素</span></span><br><span class="line"><span class="built_in">print</span>(dict1)</span><br><span class="line">dict1.clear()  <span class="comment"># 清空字典</span></span><br><span class="line"><span class="built_in">print</span>(dict1)</span><br><span class="line"><span class="keyword">del</span> dict1  <span class="comment"># 删除字典</span></span><br><span class="line"><span class="built_in">print</span>(dict1)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220811200354418.png" alt="image-20220811200354418"></p>
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220811200409571.png" alt="image-20220811200409571"></p>
+<h1 id="✏️条件控制语句——if"><a href="#✏️条件控制语句——if" class="headerlink" title="✏️条件控制语句——if"></a>✏️条件控制语句——if</h1><p>if条件控制语句用来控制代码块是否执行，在其他语言中常见的if else if 在python中被代替为if elif。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> 表达式<span class="number">1</span>:</span><br><span class="line">	执行语句</span><br><span class="line"><span class="keyword">elif</span> 表达式<span class="number">2</span>:</span><br><span class="line">	执行语句</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">	执行语句</span><br></pre></td></tr></table></figure>
+
+<p>eg：输入学生成绩score，如果大于等于90评级为A，80-90评级为B，60-80评级为C，小于60评级为D。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">score = <span class="built_in">int</span>(<span class="built_in">input</span>(<span class="string">&#x27;请输入学生成绩：&#x27;</span>))</span><br><span class="line"><span class="keyword">if</span> score &gt;= <span class="number">90</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;A&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">80</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;B&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">60</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;C&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> score &gt;= <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;D&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;成绩有误&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h1 id="✏️循环语句"><a href="#✏️循环语句" class="headerlink" title="✏️循环语句"></a>✏️循环语句</h1><p>python中的循环语句有for循环与while循环。</p>
+<h2 id="🍋for循环"><a href="#🍋for循环" class="headerlink" title="🍋for循环"></a>🍋for循环</h2><p>for循环常用格式：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> &lt;variable&gt; <span class="keyword">in</span> &lt;sequence&gt;:</span><br><span class="line">    &lt;statements&gt;</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    &lt;statements&gt;</span><br></pre></td></tr></table></figure>
+
+<p>eg:</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">index = [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> index:</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220811223701062.png" alt="image-20220811223701062"></p>
+<ul>
+<li>使用break可以当前的循环:</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">index = [<span class="string">&#x27;A&#x27;</span>, <span class="string">&#x27;B&#x27;</span>, <span class="string">&#x27;C&#x27;</span>, <span class="string">&#x27;D&#x27;</span>]</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> index:</span><br><span class="line">    <span class="keyword">if</span> i == <span class="string">&#x27;B&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;遇见B跳出循环&#x27;</span>)</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;正常循环：&#x27;</span>+ i)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220811224111685.png" alt="image-20220811224111685"></p>
+<ul>
+<li>使用continue可以跳出当此循环执行下次循环</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> index:</span><br><span class="line">    <span class="keyword">if</span> i == <span class="string">&#x27;B&#x27;</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&#x27;不输出B&#x27;</span>)</span><br><span class="line">        <span class="keyword">continue</span></span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&#x27;正常输出：&#x27;</span> + i)</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220811224837535.png" alt="image-20220811224837535"></p>
+<ul>
+<li>使用rang()函数可以便利序列：</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">5</span>):</span><br><span class="line">    <span class="built_in">print</span>(i)</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="built_in">len</span>(index)):</span><br><span class="line">    <span class="built_in">print</span>(index[i])</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/veagong/note/raw/master/img/image-20220811224343771.png" alt="image-20220811224343771"></p>
+<h2 id="🍋while循环"><a href="#🍋while循环" class="headerlink" title="🍋while循环"></a>🍋while循环</h2> 
+      <!-- reward -->
+      
+    </div>
+    
+
+    <!-- copyright -->
+    
+    <div class="declare">
+      <ul class="post-copyright">
+        <li>
+          <i class="ri-copyright-line"></i>
+          <strong>Copyright： </strong>
+          
+          Copyright is owned by the author. For commercial reprints, please contact the author for authorization. For non-commercial reprints, please indicate the source.
+          
+        </li>
+      </ul>
+    </div>
+    
+    <footer class="article-footer">
+       
+<div class="share-btn">
+      <span class="share-sns share-outer">
+        <i class="ri-share-forward-line"></i>
+        分享
+      </span>
+      <div class="share-wrap">
+        <i class="arrow"></i>
+        <div class="share-icons">
+          
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="ri-weibo-fill"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="ri-wechat-fill"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="ri-qq-fill"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="ri-douban-line"></i>
+          </a>
+          <!-- <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a> -->
+          
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="ri-facebook-circle-fill"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="ri-twitter-fill"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="ri-google-fill"></i>
+          </a>
+        </div>
+      </div>
+</div>
+
+<div class="wx-share-modal">
+    <a class="modal-close" href="javascript:;"><i class="ri-close-circle-line"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//api.qrserver.com/v1/create-qr-code/?size=150x150&data=http://example.com/2022/08/14/python%E7%88%AC%E8%99%AB%E6%97%A5%E8%AE%B0%EF%BC%88%E4%B8%80%EF%BC%89%E2%80%94%E2%80%94python%E5%9F%BA%E7%A1%80/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div id="share-mask"></div>  
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/%E6%8A%80%E6%9C%AF/" rel="tag">技术</a></li></ul>
+
+    </footer>
+  </div>
+
+   
+  <nav class="article-nav">
+    
+    
+      <a href="/2022/08/13/python%E7%88%AC%E8%99%AB/" class="article-nav-link">
+        <strong class="article-nav-caption">下一篇</strong>
+        <div class="article-nav-title">python爬虫</div>
+      </a>
+    
+  </nav>
+
+   
+<!-- valine评论 -->
+<div id="vcomments-box">
+  <div id="vcomments"></div>
+</div>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src="https://cdn.staticfile.org/valine/1.4.16/Valine.min.js"></script>
+<script>
+  new Valine({
+    el: "#vcomments",
+    app_id: "zN4vtr3RvciTGLllF5O0jw39-gzGzoHsz",
+    app_key: "7DdOKfMJNDCudQLlrhWckcus",
+    path: window.location.pathname,
+    avatar: "monsterid",
+    placeholder: "给我的文章加点评论吧~",
+    recordIP: true,
+  });
+  const infoEle = document.querySelector("#vcomments .info");
+  if (infoEle && infoEle.childNodes && infoEle.childNodes.length > 0) {
+    infoEle.childNodes.forEach(function (item) {
+      item.parentNode.removeChild(item);
+    });
+  }
+</script>
+<style>
+  #vcomments-box {
+    padding: 5px 30px;
+  }
+
+  @media screen and (max-width: 800px) {
+    #vcomments-box {
+      padding: 5px 0px;
+    }
+  }
+
+  #vcomments-box #vcomments {
+    background-color: #fff;
+  }
+
+  .v .vlist .vcard .vh {
+    padding-right: 20px;
+  }
+
+  .v .vlist .vcard {
+    padding-left: 10px;
+  }
+</style>
+
+ 
+   
+     
+</article>
+
+</section>
+      <footer class="footer">
+  <div class="outer">
+    <ul>
+      <li>
+        Copyrights &copy;
+        2022
+        <i class="ri-heart-fill heart_icon"></i> FFXDZ
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+      </li>
+    </ul>
+    <ul>
+      <li>
+        
+        
+        <span>
+  <span><i class="ri-user-3-fill"></i>Visitors:<span id="busuanzi_value_site_uv"></span></span>
+  <span class="division">|</span>
+  <span><i class="ri-eye-fill"></i>Views:<span id="busuanzi_value_page_pv"></span></span>
+</span>
+        
+      </li>
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      
+    </ul>
+    <ul>
+      <li>
+        <!-- cnzz统计 -->
+        
+        <script type="text/javascript" src='https://s9.cnzz.com/z_stat.php?id=1278069914&amp;web_id=1278069914'></script>
+        
+      </li>
+    </ul>
+  </div>
+</footer>    
+    </main>
+    <div class="float_btns">
+      <div class="totop" id="totop">
+  <i class="ri-arrow-up-line"></i>
+</div>
+
+<div class="todark" id="todark">
+  <i class="ri-moon-line"></i>
+</div>
+
+    </div>
+    <aside class="sidebar on">
+      <button class="navbar-toggle"></button>
+<nav class="navbar">
+  
+  <div class="logo">
+    <a href="/"><img src="/images/时间-is.svg" alt="穿梭时间"></a>
+  </div>
+  
+  <ul class="nav nav-main">
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/">主页</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/archives">归档</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/categories">分类</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/tags">标签</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/friends">友链</a>
+    </li>
+    
+    <li class="nav-item">
+      <a class="nav-item-link" href="/aboutme">关于我</a>
+    </li>
+    
+  </ul>
+</nav>
+<nav class="navbar navbar-bottom">
+  <ul class="nav">
+    <li class="nav-item">
+      
+      <a class="nav-item-link nav-item-search"  title="Search">
+        <i class="ri-search-line"></i>
+      </a>
+      
+      
+    </li>
+  </ul>
+</nav>
+<div class="search-form-wrap">
+  <div class="local-search local-search-plugin">
+  <input type="search" id="local-search-input" class="local-search-input" placeholder="Search...">
+  <div id="local-search-result" class="local-search-result"></div>
+</div>
+</div>
+    </aside>
+    <div id="mask"></div>
+
+<!-- #reward -->
+<div id="reward">
+  <span class="close"><i class="ri-close-line"></i></span>
+  <p class="reward-p"><i class="ri-cup-line"></i>请我喝杯咖啡吧~</p>
+  <div class="reward-box">
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/alipay.jpg">
+      <span class="reward-type">支付宝</span>
+    </div>
+    
+    
+    <div class="reward-item">
+      <img class="reward-img" src="/images/wechat.jpg">
+      <span class="reward-type">微信</span>
+    </div>
+    
+  </div>
+</div>
+    
+<script src="/js/jquery-3.6.0.min.js"></script>
+ 
+<script src="/js/lazyload.min.js"></script>
+
+<!-- Tocbot -->
+ 
+<script src="/js/tocbot.min.js"></script>
+
+<script>
+  tocbot.init({
+    tocSelector: ".tocbot",
+    contentSelector: ".article-entry",
+    headingSelector: "h1, h2, h3, h4, h5, h6",
+    hasInnerContainers: true,
+    scrollSmooth: true,
+    scrollContainer: "main",
+    positionFixedSelector: ".tocbot",
+    positionFixedClass: "is-position-fixed",
+    fixedSidebarOffset: "auto",
+  });
+</script>
+
+<script src="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.js"></script>
+<link
+  rel="stylesheet"
+  href="https://cdn.staticfile.org/jquery-modal/0.9.2/jquery.modal.min.css"
+/>
+<script src="https://cdn.staticfile.org/justifiedGallery/3.8.1/js/jquery.justifiedGallery.min.js"></script>
+
+<script src="/dist/main.js"></script>
+
+<!-- ImageViewer -->
+ <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.css">
+<link rel="stylesheet" href="https://cdn.staticfile.org/photoswipe/4.1.3/default-skin/default-skin.min.css">
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe.min.js"></script>
+<script src="https://cdn.staticfile.org/photoswipe/4.1.3/photoswipe-ui-default.min.js"></script>
+
+<script>
+    function viewer_init() {
+        let pswpElement = document.querySelectorAll('.pswp')[0];
+        let $imgArr = document.querySelectorAll(('.article-entry img:not(.reward-img)'))
+
+        $imgArr.forEach(($em, i) => {
+            $em.onclick = () => {
+                // slider展开状态
+                // todo: 这样不好，后面改成状态
+                if (document.querySelector('.left-col.show')) return
+                let items = []
+                $imgArr.forEach(($em2, i2) => {
+                    let img = $em2.getAttribute('data-idx', i2)
+                    let src = $em2.getAttribute('data-target') || $em2.getAttribute('src')
+                    let title = $em2.getAttribute('alt')
+                    // 获得原图尺寸
+                    const image = new Image()
+                    image.src = src
+                    items.push({
+                        src: src,
+                        w: image.width || $em2.width,
+                        h: image.height || $em2.height,
+                        title: title
+                    })
+                })
+                var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, {
+                    index: parseInt(i)
+                });
+                gallery.init()
+            }
+        })
+    }
+    viewer_init()
+</script> 
+<!-- MathJax -->
+
+<!-- Katex -->
+
+<!-- busuanzi  -->
+ 
+<script src="/js/busuanzi-2.3.pure.min.js"></script>
+ 
+<!-- ClickLove -->
+
+<!-- ClickBoom1 -->
+
+<!-- ClickBoom2 -->
+ 
+<script src="/js/clickBoom2.js"></script>
+ 
+<!-- CodeCopy -->
+ 
+<link rel="stylesheet" href="/css/clipboard.css">
+ <script src="https://cdn.staticfile.org/clipboard.js/2.0.10/clipboard.min.js"></script>
+<script>
+  function wait(callback, seconds) {
+    var timelag = null;
+    timelag = window.setTimeout(callback, seconds);
+  }
+  !function (e, t, a) {
+    var initCopyCode = function(){
+      var copyHtml = '';
+      copyHtml += '<button class="btn-copy" data-clipboard-snippet="">';
+      copyHtml += '<i class="ri-file-copy-2-line"></i><span>COPY</span>';
+      copyHtml += '</button>';
+      $(".highlight .code pre").before(copyHtml);
+      $(".article pre code").before(copyHtml);
+      var clipboard = new ClipboardJS('.btn-copy', {
+        target: function(trigger) {
+          return trigger.nextElementSibling;
+        }
+      });
+      clipboard.on('success', function(e) {
+        let $btn = $(e.trigger);
+        $btn.addClass('copied');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-checkbox-circle-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPIED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-checkbox-circle-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+      clipboard.on('error', function(e) {
+        e.clearSelection();
+        let $btn = $(e.trigger);
+        $btn.addClass('copy-failed');
+        let $icon = $($btn.find('i'));
+        $icon.removeClass('ri-file-copy-2-line');
+        $icon.addClass('ri-time-line');
+        let $span = $($btn.find('span'));
+        $span[0].innerText = 'COPY FAILED';
+        
+        wait(function () { // 等待两秒钟后恢复
+          $icon.removeClass('ri-time-line');
+          $icon.addClass('ri-file-copy-2-line');
+          $span[0].innerText = 'COPY';
+        }, 2000);
+      });
+    }
+    initCopyCode();
+  }(window, document);
+</script>
+ 
+<!-- CanvasBackground -->
+ 
+<script src="/js/dz.js"></script>
+ 
+<script>
+  if (window.mermaid) {
+    mermaid.initialize({ theme: "forest" });
+  }
+</script>
+
+
+    
+    <div id="music">
+    
+    
+    
+    <iframe frameborder="no" border="1" marginwidth="0" marginheight="0" width="200" height="86"
+        src="//music.163.com/outchain/player?type=2&id=22707008&auto=0&height=66"></iframe>
+</div>
+
+<style>
+    #music {
+        position: fixed;
+        right: 15px;
+        bottom: 0;
+        z-index: 998;
+    }
+</style>
+    
+    
+
+  </div>
+</body>
+
+</html>
